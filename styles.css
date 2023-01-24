@@ -1,11 +1,39 @@
-
+body {
+    z-index: -2;
+    background-color: black;
+}
 
 #game {
-    margin: auto;
+    margin: 10% auto auto auto;
+    position: relative;
     border: 1px solid black;
     height: 500px;
     width: 800px;
+    background-image: url('/img/background.png');
 }
+
+
+#sun {
+    position: absolute;
+    z-index: 1;
+    opacity: 80%;
+    border: 1px solid black;
+    height: 500px;
+    width: 800px;
+    background-image: url('/img/sun.PNG');
+}
+
+#cloudbirds {
+    position: absolute;
+    z-index: 0;
+    opacity: 50%;
+    border: 1px solid black;
+    height: 500px;
+    width: 800px;
+    background-image: url('/img/cloudbirds.PNG');
+}
+
+
 
 #avatar {
     width: 20px;
@@ -16,7 +44,7 @@
 }
 
 .animate {
-    animation: jump 500ms infinite;
+    animation: jump 500ms;
 }
 
 #block {
@@ -26,7 +54,7 @@
     position: relative;
     top: 130px;
     left: 480px;
-    animation: block 1s infinite linear;
+/*    animation: block 1s infinite linear; */
 }
 
 @keyframes block{
