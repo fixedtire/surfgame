@@ -1,3 +1,6 @@
+
+/*  ------------- BACKGROUND ------------ */
+
 body {
     z-index: -2;
     background-color: black;
@@ -12,11 +15,10 @@ body {
     background-image: url('/img/background.png');
 }
 
-
 #sun {
     position: absolute;
     z-index: 1;
-    opacity: 80%;
+    opacity: 40%;
     border: 1px solid black;
     height: 500px;
     width: 800px;
@@ -32,6 +34,102 @@ body {
     width: 800px;
     background-image: url('/img/cloudbirds.PNG');
 }
+
+/*  ------------- WAVES ------------ */
+
+
+
+#wave_line {
+    position: absolute;
+    z-index: 0;
+    opacity: 50%;
+    bottom: 7%;
+    height: 500px;
+    width: 800px;
+    background-image: url('/img/wave_line.PNG');
+
+}
+
+#wave_flood1 {
+    position: absolute;
+    z-index: 0;
+    bottom: 7%;
+    opacity: 50%;
+    height: 500px;
+    width: 800px;
+    background-image: url('/img/wave_flood1.PNG');
+}
+
+#wave_flood2 {
+    position: absolute;
+    z-index: 0;
+    opacity: 50%;
+    border: 1px solid black;
+    height: 500px;
+    width: 800px;
+    background-image: url('/img/wave_flood2.PNG');
+}
+
+#white_water1 {
+    position: absolute;
+    z-index: 0;
+    bottom: 7%;
+    opacity: 100%;
+    height: 500px;
+    width: 800px;
+    background-image: url('/img/wave_flood1.PNG');
+}
+
+#white_water2 {
+    position: absolute;
+    z-index: 0;
+    bottom: 7%;
+    opacity: 100%;
+    height: 500px;
+    width: 800px;
+    background-image: url('/img/wave_flood1.PNG');
+}
+
+#white_water3 {
+    position: absolute;
+    z-index: 0;
+    bottom: 7%;
+    opacity: 100%;
+    height: 500px;
+    width: 800px;
+    background-image: url('/img/wave_flood1.PNG');
+}
+
+#white_water4 {
+    position: absolute;
+    z-index: 0;
+    bottom: 7%;
+    opacity: 100%;
+    height: 500px;
+    width: 800px;
+    background-image: url('/img/wave_flood1.PNG');
+}
+
+#white_water5 {
+    position: absolute;
+    z-index: 0;
+    bottom: 7%;
+    opacity: 100%;
+    height: 500px;
+    width: 800px;
+    background-image: url('/img/wave_flood1.PNG');
+}
+
+#white_water6 {
+    position: absolute;
+    z-index: 0;
+    bottom: 7%;
+    opacity: 100%;
+    height: 500px;
+    width: 800px;
+    background-image: url('/img/wave_flood1.PNG');
+}
+
 
 
 
