@@ -10,6 +10,7 @@ body {
     margin: 10% auto auto auto;
     position: relative;
     border: 1px solid black;
+    overflow: hidden;
     height: 500px;
     width: 800px;
     background-image: url('/img/background.png');
@@ -35,30 +36,57 @@ body {
     background-image: url('/img/cloudbirds.PNG');
 }
 
+/*  ------------- SURFBOARD ------------ */
+
+#surfboard {
+    position: absolute;
+    z-index: 5;
+    right: 30%;
+    transform: translateY(0);
+    transition: transform 0.5s;
+    top: 1%;
+    bottom: 7%;
+    height: 500px;
+    width: 800px;
+    background-image: url('/img/surfboard.png');
+}
+
 /*  ------------- WAVES ------------ */
-
-
 
 #wave_line {
     position: absolute;
     z-index: 0;
     opacity: 50%;
-    bottom: 7%;
     height: 500px;
-    width: 800px;
+    width: 6000px;
     background-image: url('/img/wave_line.PNG');
-
+    animation: moveWaves 20s ease-in-out infinite, blink 1s ease-in-out infinite alternate;;
 }
 
 #wave_flood1 {
     position: absolute;
     z-index: 0;
-    bottom: 7%;
     opacity: 50%;
     height: 500px;
     width: 800px;
     background-image: url('/img/wave_flood1.PNG');
+    width: 6000px;
+    animation: moveWaves 20s ease-in-out infinite, blink 1s ease-in-out infinite alternate;;
 }
+
+@keyframes moveWaves {
+    0% {
+      transform: translateX(-2000px);
+    }
+
+    50% {
+        transform: translateX(1000px);
+    }
+
+    100% {
+      transform: translateX(5000px);
+    }
+  }
 
 #wave_flood2 {
     position: absolute;
@@ -71,75 +99,181 @@ body {
 }
 
 #white_water1 {
+    display: none;
     position: absolute;
     z-index: 0;
     bottom: 7%;
     opacity: 100%;
     height: 500px;
     width: 800px;
-    background-image: url('/img/wave_flood1.PNG');
+    background-image: url('/img/whitewater1.PNG');
 }
 
 #white_water2 {
+    display: none;
     position: absolute;
     z-index: 0;
     bottom: 7%;
-    opacity: 100%;
+    opacity: 80%;
     height: 500px;
     width: 800px;
-    background-image: url('/img/wave_flood1.PNG');
+    background-image: url('/img/whitewater2.PNG');
 }
 
 #white_water3 {
+    display: none;
     position: absolute;
     z-index: 0;
     bottom: 7%;
-    opacity: 100%;
+    opacity: 60%;
     height: 500px;
     width: 800px;
-    background-image: url('/img/wave_flood1.PNG');
+    background-image: url('/img/whitewater3.PNG');
 }
 
 #white_water4 {
+    display: none;
     position: absolute;
     z-index: 0;
     bottom: 7%;
-    opacity: 100%;
+    opacity: 50%;
     height: 500px;
     width: 800px;
-    background-image: url('/img/wave_flood1.PNG');
+    background-image: url('/img/whitewater4.PNG');
 }
 
 #white_water5 {
+    display: none;
     position: absolute;
     z-index: 0;
     bottom: 7%;
-    opacity: 100%;
+    opacity: 30%;
     height: 500px;
     width: 800px;
-    background-image: url('/img/wave_flood1.PNG');
+    background-image: url('/img/whitewater5.PNG');
 }
 
 #white_water6 {
+    display: none;
     position: absolute;
     z-index: 0;
     bottom: 7%;
-    opacity: 100%;
+    opacity: 20%;
     height: 500px;
     width: 800px;
-    background-image: url('/img/wave_flood1.PNG');
+    background-image: url('/img/whitewater6.PNG');
+}
+
+/*  ------------- GARBAGE ------------ */
+
+#bottles {
+    display: block;
+    position: absolute;
+    left: 710px;
+    z-index: 5;
+    height: 500px;
+    width: 800px;
+    background-image: url('/img/bottles.PNG');
+    transform: translateY(-50%) translateX(0);
+    animation: moveBottles 5s ease-in-out infinite, blink 1s ease-in-out infinite alternate;;
+  }
+  
+  @keyframes moveBottles {
+    0% {
+      transform: translateX(0) translateY(0);;
+    }
+
+    50% {
+        transform: translateX(-300px) translateY(-100px);
+    }
+
+    100% {
+      transform: translateX(-800px) translateY(0);;
+    }
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+    }
+  }  
+  
+
+#tire {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    bottom: 7%;
+    height: 500px;
+    width: 800px;
+    background-image: url('/img/tire.PNG');
+}
+
+#flipflops {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    bottom: 7%;
+    height: 500px;
+    width: 800px;
+    background-image: url('/img/flipflops.PNG');
+}
+
+#bags {
+    display:none;
+    position: absolute;
+    z-index: 5;
+    bottom: 7%;
+    height: 500px;
+    width: 800px;
+    background-image: url('/img/bags.PNG');
+}
+
+/*  ------------- ANIMALS ------------ */
+
+#dolphin {
+    display:none;    
+    position: absolute;
+    z-index: 5;
+    bottom: 7%;
+    height: 500px;
+    width: 800px;
+    background-image: url('/img/dolphin.PNG');
+}
+
+#shark {
+    display:none;
+    position: absolute;
+    z-index: 5;
+    bottom: 7%;
+    height: 500px;
+    width: 800px;
+    background-image: url('/img/shark.PNG');
+}
+
+#turtle {
+    display:none;
+    position: absolute;
+    z-index: 5;
+    bottom: 7%;
+    height: 500px;
+    width: 800px;
+    background-image: url('/img/turtle.PNG');
 }
 
 
 
 
-#avatar {
-    width: 20px;
-    height: 50px;
-    background-color: red;
-    position: relative;
-    top: 150px;
-}
+
+
+
+/* TUT:: */
 
 .animate {
     animation: jump 500ms;
