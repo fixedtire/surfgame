@@ -9,6 +9,8 @@ const white_water4 = document.getElementById("white_water4");
 const white_water5 = document.getElementById("white_water5");
 const white_water6 = document.getElementById("white_water6");
 
+const bottles = document.getElementById("bottles");
+
 // ----- WHITE WAVE ANIMATION ------ //
 
 let waveInterval = 500;
@@ -55,6 +57,8 @@ function addWaveAnimation6() {
 
 enableWaveAnimation();
 
+// ------ KEY ASSIGNMENT AND FUNCTIONS (arrowLeft + arrowRight) -----------
+
 window.addEventListener("keydown", (e) => {
   if (e.keyCode == 38) {
     moveUp();
@@ -75,68 +79,22 @@ function moveDown() {
   surfboard.style.transform = `translateY(${valueY}px)`;
 }
 
-/*
-document.onkeydown = function (event) {
-  const elementToMove = document.getElementById("surfboard");
-  if ((event.keyCode = "38")) {
-    elementToMove.style.top = parseInt(surfboard.style.top || 0) - 10 + "px";
-  } else if ((event.keyCode = "40")) {
-    elementToMove.style.bottom =
-      parseInt(surfboard.style.bottom || 0) - 10 + "px";
+// -------  CHECK IF ELEMENTS COLLIDE --------
+
+const checkCollision = () => {
+  const surfboardRect = surfboard.getBoundingClientRect();
+  const bottlesRect = bottles.getBoundingClientRect();
+
+  if (
+    surfboardRect.x < bottlesRect.x + bottlesRect.width &&
+    surfboardRect.x + surfboardRect.width > bottlesRect.x &&
+    surfboardRect.y < bottlesRect.y + bottlesRect.height &&
+    surfboardRect.y + surfboardRect.height > bottlesRect.y
+  ) {
+    console.log("BOOM!");
   }
-}; 
+};
 
-document.addEventListener("keydown", (e) => {
-  const elementToMove = document.getElementById("surfboard");
-  e = e || window.event;
-  if (e.key === "ArrowUp") {
-    elementToMove.style.top = parseInt(surfboard.style.top || 0) - 10 + "px";
-  } else if (e.key === "ArrowDown") {
-    elementToMove.style.bottom =
-      parseInt(surfboard.style.bottom || 0) - 10 + "px";
-  }
-});
+// ------ checks for Collisions every 100 ms  ------
 
-
-
-window.addEventListener("keydown", () => {
-  if (event.keyCode == 38) {
-    moveUp();
-  } else if (event.keyCode == 40) {
-    moveDown();
-  }
-});
-
-function moveUp() {
-  surfboard.style.top = parseInt(surfboard.style.top || 0) - 10 + "px";
-}
-
-function moveDown() {
-  surfboard.style.bottom = parseInt(surfboard.style.bottom || 0) - 10 + "px";
-}
-
-/* function jump() {
-  if (avatar.classList != "animate") {
-    avatar.classList.add("animate");
-  }
-  setTimeout(function () {}, 500);
-  avatar.classList.remove("animate");
-}
-
-var checkDead = setInterval(function () {
-  let characterTop = parseInt(
-    window.getComputedStyle(character).getPropertyValue("top")
-  );
-  let blockLeft = parseInt(
-    window.getComputedStyle(block).getPropertyValue("left")
-  );
-  if (blockLeft < 20 && blockLeft > -20 && characterTop >= 130) {
-    block.style.animation = "none";
-    alert("Game Over. score: " + Math.floor(counter / 100));
-    counter = 0;
-    block.style.animation = "block 1s infinite linear";
-  } else {
-    counter++;
-    document.getElementById("scoreSpan").innerHTML = Math.floor(counter / 100);
-  }
-}, 10);*/
+window.setInterval(checkCollision, 100);

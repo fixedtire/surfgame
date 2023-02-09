@@ -46,9 +46,9 @@ body {
     transition: transform 0.5s;
     top: 1%;
     bottom: 7%;
-    height: 500px;
-    width: 800px;
-    background-image: url('/img/surfboard.png');
+    height: 30px;
+    width: 210px;
+    background-image: url('/img/surfboard_new.png');
 }
 
 /*  ------------- WAVES ------------ */
@@ -60,7 +60,7 @@ body {
     height: 500px;
     width: 6000px;
     background-image: url('/img/wave_line.PNG');
-    animation: moveWaves 20s ease-in-out infinite, blink 1s ease-in-out infinite alternate;;
+/*    animation: moveWaves 20s ease-in-out infinite, blink 1s ease-in-out infinite alternate;; */
 }
 
 #wave_flood1 {
@@ -71,7 +71,7 @@ body {
     width: 800px;
     background-image: url('/img/wave_flood1.PNG');
     width: 6000px;
-    animation: moveWaves 20s ease-in-out infinite, blink 1s ease-in-out infinite alternate;;
+/*    animation: moveWaves 20s ease-in-out infinite, blink 1s ease-in-out infinite alternate;; */
 }
 
 @keyframes moveWaves {
@@ -171,9 +171,9 @@ body {
     position: absolute;
     left: 710px;
     z-index: 5;
-    height: 500px;
-    width: 800px;
-    background-image: url('/img/bottles.PNG');
+    height: 58px;
+    width: 44px;
+    background-image: url('/img/bottles_new.png');
     transform: translateY(-50%) translateX(0);
     animation: moveBottles 5s ease-in-out infinite, blink 1s ease-in-out infinite alternate;;
   }
