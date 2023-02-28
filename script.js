@@ -92,6 +92,7 @@ const checkCollision = () => {
     surfboardRect.y + surfboardRect.height > bottlesRect.y
   ) {
     console.log("BOOM!");
+    alert("WIPEOUUUT!");
   }
 };
 
