@@ -11,6 +11,8 @@ const white_water6 = document.getElementById("white_water6");
 
 const bottles = document.getElementById("bottles");
 
+const wipeout = document.getElementById("wipeout");
+
 // ----- WHITE WAVE ANIMATION ------ //
 
 let waveInterval = 500;
@@ -91,9 +93,14 @@ const checkCollision = () => {
     surfboardRect.y < bottlesRect.y + bottlesRect.height &&
     surfboardRect.y + surfboardRect.height > bottlesRect.y
   ) {
-    console.log("BOOM!");
-    alert("WIPEOUUUT!");
+    // alert("BOOM!");
+    wipeout.style.display = "block";
   }
+};
+
+const hideBox = () => {
+  wipeout.style.display = "none";
+  window.setInterval(checkCollision, 100);
 };
 
 // ------ checks for Collisions every 100 ms  ------
