@@ -127,12 +127,18 @@ const animateBoard = () => {
     "moveBottles 5s ease-in-out infinite, blink 1s ease-in-out infinite alternate";
 };
 
+// ------- FUNCTION THAT START WHEN 'OK' IS CLICKED
+
 const hideBox = () => {
+  // animates board again
   animateBoard();
+  // hides info box
   wipeout.style.display = "none";
-  window.setInterval(checkCollision, 100);
-  // REMOVING ONE HEART
+  // checking for new collisions
+  setInterval(checkCollision, 100);
+  // removes one heart
   life -= 1;
+  // displays updated life amount
   lifeAmount.textContent = life;
 };
 
