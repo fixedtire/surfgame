@@ -60,7 +60,7 @@ body {
     height: 500px;
     width: 6000px;
     background-image: url('/img/wave_line.PNG');
-/*    animation: moveWaves 20s ease-in-out infinite, blink 1s ease-in-out infinite alternate;; */
+/*   animation: moveWaves 20s ease-in-out infinite, blink 1s ease-in-out infinite alternate;; */
 }
 
 #wave_flood1 {
@@ -288,8 +288,24 @@ body {
     color: white;
 }
 
+/* --------- CONTROLS INFO BOX ------------ */
 
+#controls_info {
+    padding: 1em;
+    background-color: white;
 
+}
+
+#controls_keys {
+    width: 120%;
+}
+
+/* --------- LIFE ------------ */
+
+#life {
+    float: right;
+    font-size: 2em;
+}
 
 
 

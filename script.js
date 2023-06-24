@@ -13,6 +13,10 @@ const bottles = document.getElementById("bottles");
 
 const wipeout = document.getElementById("wipeout");
 
+// ----- CREATING VARIABLE FOR LIFE AMOUNT ------ //
+
+let life = 3;
+
 // ----- WHITE WAVE ANIMATION ------ //
 
 let waveInterval = 500;
@@ -93,7 +97,7 @@ const checkCollision = () => {
     surfboardRect.y < bottlesRect.y + bottlesRect.height &&
     surfboardRect.y + surfboardRect.height > bottlesRect.y
   ) {
-    // alert("BOOM!");
+    // SHOWS GAME OVER MESSAGE
     wipeout.style.display = "block";
   }
 };
