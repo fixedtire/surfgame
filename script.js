@@ -13,9 +13,17 @@ const bottles = document.getElementById("bottles");
 
 const wipeout = document.getElementById("wipeout");
 
+const game_over = document.getElementById("game_over");
+
+const lifeAmount = document.getElementById("life_amount");
+
 // ----- CREATING VARIABLE FOR LIFE AMOUNT ------ //
 
 let life = 3;
+
+// ----- ASSIGN LIFE AMOUNT TO HTML CONTENT ------ //
+
+lifeAmount.textContent = life;
 
 // ----- WHITE WAVE ANIMATION ------ //
 
@@ -97,14 +105,35 @@ const checkCollision = () => {
     surfboardRect.y < bottlesRect.y + bottlesRect.height &&
     surfboardRect.y + surfboardRect.height > bottlesRect.y
   ) {
-    // SHOWS GAME OVER MESSAGE
+    // STOPS ANIMATION OF OBJECT
+    bottles.style.animation = "none";
+    // SHOWS WIPEOUT MESSAGE
     wipeout.style.display = "block";
   }
 };
 
+// -------  CHECK IF GAME OVER --------
+
+const checkGameOver = () => {
+  if (life === 0) {
+    wipeout.style.display = "block";
+  }
+};
+
+// -------  START SURFBOARD ANIMATION --------
+
+const animateBoard = () => {
+  bottles.style.animation =
+    "moveBottles 5s ease-in-out infinite, blink 1s ease-in-out infinite alternate";
+};
+
 const hideBox = () => {
+  animateBoard();
   wipeout.style.display = "none";
   window.setInterval(checkCollision, 100);
+  // REMOVING ONE HEART
+  life -= 1;
+  lifeAmount.textContent = life;
 };
 
 // ------ checks for Collisions every 100 ms  ------

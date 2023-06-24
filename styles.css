@@ -7,7 +7,7 @@ body {
 }
 
 #game {
-    margin: 10% auto auto auto;
+    margin: 5% auto auto auto;
     position: relative;
     border: 1px solid black;
     overflow: hidden;
@@ -176,7 +176,7 @@ body {
     width: 44px;
     background-image: url('/img/bottles_new.png');
     transform: translateY(-50%) translateX(0);
-    animation: moveBottles 5s ease-in-out infinite, blink 1s ease-in-out infinite alternate;;
+    animation: moveBottles 5s ease-in-out infinite, blink 1s ease-in-out infinite alternate;
   }
   
   @keyframes moveBottles {
@@ -272,6 +272,28 @@ body {
 
 #wipeout {
     display: none;
+    font-family: 'Courier New', Courier, monospace;
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    text-align: center;
+    font-weight: 400;
+    top: 50%;
+    right: 20%;
+    padding: 10px;
+    width: 100%;
+    align-items: center;
+    height: 100px;
+    width: 500px;
+    background-color: black;
+    color: white;
+}
+
+/* --------- GAME OVER ------------ */
+
+#game_over {
+    display: none;
+    font-family: 'Courier New', Courier, monospace;
     z-index: 10;
     position: absolute;
     margin: auto;
@@ -291,8 +313,11 @@ body {
 /* --------- CONTROLS INFO BOX ------------ */
 
 #controls_info {
+    margin: 0;
+    width: 30%;
     padding: 1em;
     background-color: white;
+    font-family: 'Courier New', Courier, monospace;
 
 }
 
