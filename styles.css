@@ -313,6 +313,7 @@ body {
 /* --------- CONTROLS INFO BOX ------------ */
 
 #controls_info {
+    display: inline-block;
     margin: 0;
     width: 30%;
     padding: 1em;
@@ -323,6 +324,24 @@ body {
 
 #controls_keys {
     width: 120%;
+}
+
+/* --------- LINK TO CODE ------------ */
+
+
+#code {
+    float: right;
+    width: 30%;
+    padding: 1em;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+  color: white;
 }
 
 /* --------- LIFE ------------ */
