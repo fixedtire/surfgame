@@ -71,7 +71,7 @@ function addWaveAnimation6() {
 
 enableWaveAnimation();
 
-// ------ KEY ASSIGNMENT AND FUNCTIONS (arrowLeft + arrowRight) -----------
+// ------ KEY ASSIGNMENT AND FUNCTIONS (arrowUp + arrowDown) -----------
 
 window.addEventListener("keydown", (e) => {
   if (e.keyCode == 38) {
@@ -127,7 +127,7 @@ const animateBoard = () => {
     "moveBottles 5s ease-in-out infinite, blink 1s ease-in-out infinite alternate";
 };
 
-// ------- FUNCTION THAT START WHEN 'OK' IS CLICKED
+// ------- FUNCTION THAT START WHEN 'OK' (INFOBOX) IS CLICKED
 
 const hideBox = () => {
   // animates board again
